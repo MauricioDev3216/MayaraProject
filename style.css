@@ -1,0 +1,252 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #222;
+  line-height: 1.7;
+}
+
+/* Cabeçalho */
+/* Cabeçalho com imagem de fundo */
+header.com-imagem {
+  background-image: url("img/nuvem.png");
+  background-size: cover;
+  background-position: center;
+  padding: 60px 30px;
+  color: white;
+  position: relative;
+}
+
+/* Sobreposição escura para legibilidade */
+header.com-imagem::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* escurece a imagem */
+  z-index: 1;
+}
+
+/* Conteúdo sobre a imagem */
+.header-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-container h1 {
+  font-size: 2.8em;
+  font-weight: bold;
+}
+
+.header-container .contato {
+  text-align: right;
+}
+
+.header-container .contato a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+}
+
+
+/* Slogan */
+.slogan {
+  background-color: #000;
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.slogan h2 {
+  font-size: 1.8em;
+  font-weight: 400;
+}
+
+/* Serviços */
+.servicos {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.servico {
+  display: flex;
+  align-items: center;
+  background-color: #f6f6f6;
+  border-left: 6px solid #3498db;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  gap: 30px;
+}
+
+.servico img {
+  width: 180px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.descricao h2 {
+  margin-bottom: 10px;
+  font-size: 1.6em;
+}
+
+.descricao p {
+  font-size: 1.05em;
+  color: #555;
+}
+
+/* WhatsApp flutuante */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  font-size: 28px;
+  text-decoration: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .servico {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .servico img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .header-container .contato {
+    text-align: center;
+  }
+}
+
+/* Seção de Contato */
+#contato {
+  background-color: #0b466d;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#contato h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+#contato form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#contato input,
+#contato textarea {
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  color: #111;
+}
+
+#contato textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+#contato button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#contato button:hover {
+  background-color: #222;
+}
+
+/* Botão flutuante do WhatsApp com texto */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  font-size: 28px;
+  text-decoration: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+  overflow: hidden;
+  transition: width 0.4s ease;
+}
+
+/* Ícone */
+.whatsapp img {
+  width: 30px;
+  height: 30px;
+  
+}
+
+/* Texto escondido inicialmente */
+.whatsapp .texto-whatsapp {
+  margin-left: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.4s ease;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Ao passar o mouse, expandir botão e revelar texto */
+.whatsapp:hover {
+  width: 150px;
+}
+
+.whatsapp:hover .texto-whatsapp {
+  opacity: 1;
+  transform: translateX(0);
+}

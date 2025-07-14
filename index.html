@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mayara Serviços</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Cabeçalho preto -->
+  <header>
+    <header class="com-imagem">
+  <div class="header-container">
+    <h1>Manutenção Residencial</h1>
+    <div class="contato">
+      <span>2025</span>
+      <a href="tel:+5551997665812">📞 (51) 99766-5812</a>
+    </div>
+  </div>
+</header>
+
+  </header>
+
+
+  <!-- Seção de Serviços -->
+  <section class="servicos">
+    <div class="servico">
+      <img src="img/eletrica.jpg" alt="Elétrica">
+      <div class="descricao">
+        <h2>Elétrica</h2>
+        <p>Instalação de luminárias, troca de fiação, conserto de tomadas, interruptores e serviços elétricos simples com segurança.</p>
+      </div>
+    </div>
+
+    <div class="servico">
+      <img src="img/camera.jpg" alt="Câmeras">
+      <div class="descricao">
+        <h2>Instalação de Câmeras</h2>
+        <p>Instalação básica de câmeras de segurança com cabeamento e posicionamento estratégico para proteção residencial e comercial.</p>
+      </div>
+    </div>
+
+    <div class="servico">
+      <img src="img/encanamento.jpg" alt="Encanamentos">
+      <div class="descricao">
+        <h2>Encanamentos</h2>
+        <p>Reparo em registros, torneiras, vazamentos, sifões e instalações hidráulicas simples com agilidade e limpeza.</p>
+      </div>
+    </div>
+
+    <div class="servico">
+      <img src="img/pintura.jpg" alt="Pintura">
+      <div class="descricao">
+        <h2>Pintura</h2>
+        <p>Pintura interna e externa com acabamento fino, correção de imperfeições e aplicação de massa corrida conforme necessário.</p>
+      </div>
+    </div>
+  </section>
+
+<a href="https://wa.me/5551997665812" class="whatsapp" target="_blank">
+  <img src="img/WhatsApp.png" alt="WhatsApp">
+  <span class="texto-whatsapp">WhatsApp</span>
+</a>
+
+  <!-- ScrollReveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    ScrollReveal().reveal('.servico', {
+      origin: 'left',
+      distance: '60px',
+      duration: 800,
+      delay: 100,
+      easing: 'ease-out',
+      interval: 200
+    });
+  </script>
+<!-- Seção de Contato -->
+<section id="contato">
+  <h2>Fale comigo</h2>
+  <form>
+    <input type="text" placeholder="Seu nome" required>
+    <input type="email" placeholder="Seu e-mail" required>
+    <textarea placeholder="Sua mensagem..." required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+</body>
+</html>
